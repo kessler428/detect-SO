@@ -38,6 +38,21 @@ function App() {
 
         <h2 className='subtitle'>Bienvenido a Escot App</h2>
 
+        <button
+          className='download'
+          onClick={() => {
+            const mobileOS = getMobileOS();
+
+            if (mobileOS === 'iOS') {
+              window.location.href = 'https://apps.apple.com/us/app/escot-app/id6480478411';
+            } else if (mobileOS === 'Android') {
+              window.location.href = 'https://play.google.com/store/apps/details?id=com.escotapp.app';
+            }
+          }}
+        >
+          Descargar App
+        </button>
+
       </div>
     </div>
   )
