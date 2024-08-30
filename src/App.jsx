@@ -20,6 +20,13 @@ function App() {
   useEffect(() => {
     const mobileOS = getMobileOS();
     console.log(mobileOS);
+
+    if (mobileOS === 'iOS') {
+      window.location.href = 'https://apps.apple.com/us/app/escot-app/id6480478411';
+    } else if (mobileOS === 'Android') {
+      window.location.href = 'https://play.google.com/store/apps/details?id=com.escotapp.app';
+    }
+
   }, []);
   
 
